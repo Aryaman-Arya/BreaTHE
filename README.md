@@ -8,6 +8,10 @@
 
 ![image](https://github.com/Aryaman-Arya/BreaTHE/assets/85841043/558436c8-5435-43b9-9536-7e91b43cf7a4)
 
+![image](https://github.com/Aryaman-Arya/BreaTHE/assets/85841043/eb3dd40b-d2a1-4f8e-804f-2ab6becba042)
+
+![image](https://github.com/Aryaman-Arya/BreaTHE/assets/85841043/bbd351e7-4b8b-4923-ab68-33a43313c4f5)
+
 We are currently using the **ICBHI, 2017** challenge dataset for model training. The data samples include the respiratory sounds of both healthy individuals, as well as of patients who were having respiratory ailments. The patients span all age groups, including young children, adults, and senior citizens. The dataset consists of a total of **5.5 h of recordings containing 6898 respiratory cycles**, of which 1,864 contain crackles, 886 contain wheezes, and 506 contain both crackles and wheezes, in 920 annotated audio samples from 126 subjects.
 
 The distribution of the Dataset (before augmentation):
@@ -30,3 +34,9 @@ Signals after Log-Mel transform -
 
 ![image](https://user-images.githubusercontent.com/85841043/230003483-d3c861c8-9d30-4fc1-83eb-3ce58d37639f.png)
 
+We have used Federated learning architecture to predict the above mentioned diseases which achieves the validation accuracy of 99.19% and has a False Negative rate of 0.008 (i.e 1 out of every 125 patients).
+
+![image](https://github.com/Aryaman-Arya/BreaTHE/assets/85841043/abcadb73-9a42-4aba-846d-5f5131a8b364)
+
+Team 
+![image](https://github.com/Aryaman-Arya/BreaTHE/assets/85841043/ca9bac33-a0cd-4490-ad1f-8fb260d11f2a)
