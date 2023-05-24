@@ -1,144 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>BreaTHE: Home</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Prediction</title>
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-
-	<body class="mx-20 min-h-screen bg-gradient-to-b from-rose-100 to-teal-100">
-		<div class="mx-auto p-10 flex flex-col">
-			<div>
-				<h1
-					class="text-6xl justify-center items-center font-bold mb-10 select-none lg:text-4xl justify-start items-start"
-				>
-					Brea<span class="text-red-700">THE</span> : Breath Tracking
-					and Health Evaluation
-				</h1>
-
-				<div
-					class="flex items-center justify-center w-full gap-5 mb-10 lg:justify-end"
-				>
-					<div
-						class="flex flex-col justify-center items-center select-none"
-					>
-						<p class="text-xl font-semibold">
-							<span class="text-2xl text-red-700 font-bold"
-								>S</span
-							>olving for
-							<span class="text-2xl text-red-700 font-bold"
-								>I</span
-							>ndia
-							<span class="text-2xl text-red-700 font-bold"
-								>H</span
-							>ackathon
-						</p>
-						<p class="text-xl font-semibold">2023</p>
-					</div>
-
-					<img
-						class="p-2 shadow rounded-2xl w-auto h-20 align-middle border-2 border-gray-500 border-dashed select-none"
-						src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210420155809/gfg-new-logo.png"
-						alt="GFG logo"
-						style="-webkit-user-drag: none"
-					/>
-					<img
-						class="p-1 shadow rounded-2xl w-auto h-20 align-middle border-2 border-gray-500 border-dashed select-none"
-						src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg"
-						alt="google-cloud logo"
-						style="-webkit-user-drag: none"
-					/>
-				</div>
-			</div>
-
-			<p class="text-lg mb-10">
-				BreaTHE is a web application that uses the audio clip of a
-				user's breathing pattern and evaluates their respiratory health.
-				The web app provides insights into the user's respiratory health
-				by checking whether the user falls into any of the following
-				categories:
-				<span class="text-red-700 font-semibold">
-					Bronchiectasis, Bronchiolitis, Pneumonia, URTI, COPD, or
-					Healthy.
-				</span>
-				BreaTHE has the potential to help people manage their
-				respiratory health, especially in the current global pandemic,
-				where respiratory illnesses are a significant concern to the
-				whole humanity.
-			</p>
-
-			<div
-				class="text-xl font-semibold flex justify-start mb-4 text-gray-800"
-			>
-				<p>Upload an audio file</p>
-			</div>
+	<body
+		class="bg-slate-100 p-0 m-0"
+		style="font-family: 'Saira Semi Condensed'"
+	>
+	{% if user_logged_in %}
+		{% include 'base.html' %}
+		<div class="w-4/5 mt-10 m-auto overflow-hidden">
 			<form action="/predict" method="post" enctype="multipart/form-data">
-				<div class="flex items-center justify-start w-full mb-5">
-					<label
-						class="flex flex-col items-center justify-center w-full h-56 border-2 border-gray-500 border-dashed rounded-lg cursor-pointer bg-zinc-50 hover:bg-zinc-100"
-						for="dropzone-file"
-					>
+				<div
+					class="w-full text-3xl font-semibold flex justify-start mb-4 text-teal-900"
+				>
+					<p>Upload an audio file</p>
+				</div>
+				<div class="flex flex-col lg:flex-row gap-10">
+					<div class="flex flex-col lg:w-10/12">
+						
 						<div
-							class="flex flex-col items-center justify-center pt-5 pb-6"
+							class="flex items-center justify-start w-full mb-5"
 						>
-							<svg
-								aria-hidden="true"
-								class="w-10 h-10 mb-3 text-gray-600"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-								xmlns="http://www.w3.org/2000/svg"
+							<label
+								class="flex flex-col items-center justify-center w-full h-56 border-2 border-gray-500 border-dashed rounded-lg cursor-pointer bg-zinc-50 hover:bg-zinc-100"
+								for="dropzone-file"
 							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-								></path>
-							</svg>
-							<p
-								class="mb-2 text-md text-gray-600 dark:text-gray-400"
-							>
-								<span class="font-semibold"
-									>Click to upload</span
+								<div
+									class="flex flex-col items-center justify-center pt-5 pb-6"
 								>
-								or drag and drop
-							</p>
-							<p class="text-sm text-gray-600 dark:text-gray-400">
-								Supported Formats: WAV
-							</p>
+									<svg
+										aria-hidden="true"
+										class="w-10 h-10 mb-3 text-gray-600"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+										></path>
+									</svg>
+									<p
+										class="mb-2 text-md text-gray-600 dark:text-gray-400"
+									>
+										<span class="font-semibold"
+											>Click to upload</span
+										>
+										or drag and drop
+									</p>
+									<p
+										class="text-sm text-gray-600 dark:text-gray-400"
+									>
+										Supported Formats: WAV
+									</p>
+								</div>
+
+								<input
+									id="dropzone-file"
+									type="file"
+									name="audio"
+									class="hidden"
+								/>
+							</label>
+						</div>
+					</div>
+					<div
+						class="flex lg:flex-col lg:w-2/12 gap-16 items-center justify-center"
+					>
+						<div class="justify-start">
+							<input
+								class="bg-green-600 hover:bg-teal-900 text-white w-40 font-bold py-4 px-8 rounded"
+								type="submit"
+								value="Predict"
+							/>
 						</div>
 
-						<input
-							id="dropzone-file"
-							type="file"
-							name="audio"
-							class="hidden"
-						/>
-					</label>
+						<button
+							class="bg-green-600 hover:bg-teal-900 transition duration-200 text-white w-40 font-bold py-4 px-8 rounded"
+						>
+							<a href="{{ url_for('home') }}">Back to Home</a>
+						</button>
+					</div>
 				</div>
-
-				<div class="flex justify-start">
-					<p class="text-red-700 font-semibold mb-2">
-						{% if error_text %} {{ error_text }} {% endif %}
-					</p>
-				</div>
-
-				<div class="flex justify-start">
-					<input
-						class="bg-red-800 hover:bg-red-900 text-white w-40 font-bold py-2 px-4 rounded"
-						type="submit"
-						value="predict"
-					/>
-				</div>
+				{% if error_text %}
+					<div class="justify-start">
+						<p class="text-red-700 font-semibold mb-2">
+							{{ error_text }}
+						</p>
+					</div>
+				{% endif %}
 			</form>
 		</div>
 
-		{% if prediction_text %}
-		<div class="ml-auto">
-			<h2 class="text-xl font-bold mt-4">Prediction:</h2>
-			<p class="text-lg">{{ prediction_text }}</p>
-			<p class="text-lg">{{ prediction_confidence }}</p>
-		</div>
-		{% endif %}
+		{% include 'footer.html' %}
+	{% else %}
+		{% include 'login.html' %}
+	{% endif %}
 	</body>
 </html>
