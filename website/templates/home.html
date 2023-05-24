@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BreaTHE: Home</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			href="https://fonts.googleapis.com/css?family=Inter"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body
+		class="bg-slate-100 p-0 m-0"
+		style="font-family: 'Saira Semi Condensed'"
+	>
+		{% include 'base.html' %}
+		<div class="w-4/5 mt-8 m-auto overflow-hidden">
+			<div class="flex flex-col gap-6 mb-8">
+				<div class="flex items-center gap-4">
+					<div class="w-2 h-12 bg-green-600"></div>
+					<div class="font-bold text-5xl lg:text-4xl text-teal-900">
+						Welcome to BreaTHE: Your Respiratory Health Companion
+					</div>
+				</div>
+				<div>
+					<p class="text-2xl leading-10 lg:text-xl lg:leading-10" style="font-family: Inter">
+						Empower yourself with BreaTHE, the cutting-edge web
+						application that revolutionizes how you monitor your
+						respiratory health. With just a simple
+						<span class="text-green-600 font-semibold">
+							audio clip
+						</span>
+						of your breathing pattern, BreaTHE intelligently
+						assesses your respiratory well-being, giving you
+						valuable insights.
+					</p>
+				</div>
+			</div>
+
+			<div class="w-full flex flex-col lg:flex-row items-center justify-between gap-6 my-8">
+				<div class="flex justify-center lg:w-5/12">
+					<img
+						class="w-8/12 h-auto"
+						src="../static/images/lung_img.png"
+						alt="Lung Image"
+						style="-webkit-user-drag: none"
+					/>
+				</div>
+				<div class="flex flex-col gap-6 lg:w-7/12">
+					<div class="flex items-center gap-4">
+						<div class="w-2 h-12 bg-green-600"></div>
+						<div class="font-bold text-5xl lg:text-4xl text-teal-900">
+							Discover Your Respiratory Health Status
+						</div>
+					</div>
+					<div>
+						<p
+							class="text-2xl leading-10 lg:text-xl lg:leading-10"
+							style="font-family: Inter"
+						>
+							BreaTHE goes beyond traditional methods by
+							categorizing your respiratory health into six
+							comprehensive classifications:
+							<span class="text-green-600 font-semibold">
+								Bronchiectasis, Bronchiolitis, Pneumonia, URTI,
+								COPD, or Healthy.</span
+							>
+							Our advanced algorithms analyze your unique
+							breathing pattern to provide an accurate assessment
+							of your respiratory condition.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-col gap-6 my-8">
+				<div class="flex items-center gap-4">
+					<div class="w-2 h-12 bg-green-600"></div>
+					<div class="font-bold text-5xl lg:text-4xl text-teal-900">
+						Manage Your Respiratory Health with Ease
+					</div>
+				</div>
+				<div>
+					<p class="text-2xl leading-10 lg:text-xl lg:leading-10" style="font-family: Inter">
+						In the midst of the current global pandemic,
+						safeguarding your respiratory health has never been more
+						critical. BreaTHE empowers you to take control of your
+						well-being, providing the tools and knowledge needed to
+						manage respiratory illnesses effectively. Stay ahead of
+						potential health concerns and lead a healthier, happier
+						life.
+					</p>
+				</div>
+			</div>
+
+			<div class="flex flex-col gap-6 my-8">
+				<div class="flex items-center gap-4">
+					<div class="w-2 h-12 bg-green-600"></div>
+					<div class="font-bold text-5xl lg:text-4xl text-teal-900">
+						Join BreaTHE Today and Breathe Easy
+					</div>
+				</div>
+				<div>
+					<p class="text-2xl leading-10 lg:text-xl lg:leading-10" style="font-family: Inter">
+						With BreaTHE, you have the power to proactively monitor
+						your respiratory health and stay informed about
+						potential risks. Start your journey to better breathing
+						today. Together, let's overcome the challenges posed by
+						respiratory illnesses and prioritize the well-being of
+						humanity.
+					</p>
+				</div>
+			</div>
+			<div class="flex justify-center items-center my-8">
+				
+				<a
+					class="h-10 font-semibold text-2xl leading-9 text-slate-100"
+					href="/signup"
+					class="nav-link"
+					style="-webkit-user-drag: none"
+				>
+					<div class="flex px-8 py-4 bg-green-600 lg:hover:bg-teal-900 rounded gap-2.5 justify-center items-center">
+						Sign Up
+					</div>
+				</a>
+			</div>
+		</div>
+		{% include "footer.html" %}
+	</body>
+</html>
