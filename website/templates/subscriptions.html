@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Subscriptions</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Inter"
+			rel="stylesheet"
+		/>
+	</head>
+	<body
+		class="bg-slate-100 p-0 m-0"
+		style="font-family: 'Saira Semi Condensed'"
+	>
+		{% include 'navbar.html' %}
+
+		<div class="w-4/5 mt-10 m-auto overflow-hidden">
+			<div class="flex items-center justify-center mb-8">
+				<h1 class="text-5xl font-bold text-teal-900">Subscription Plans</h1>
+			</div>
+			<div class="flex flex-col lg:flex-row gap-10 my-16">
+				<!-- 1st Plan -->
+				<div
+					class="flex flex-col lg:w-3/12 items-center justify-center rounded-3xl border border-teal-900 p-6 gap-4"
+				>
+					<div class="text-lg font-semibold text-green-600">
+						1 Week
+					</div>
+					<div class="text-3xl font-bold text-teal-900">Weekly</div>
+					<div class="flex justify-center items-center">
+						<ul class="list-disc ml-10 text-lg">
+							<li>
+								Unlimited Disease Prediction for 7 days
+							</li>
+							<li>
+								Educational Resources
+							</li>
+							<li>
+								Works on Mobile only
+							</li>
+						</ul>
+					</div>
+					<div class="text-3xl text-center font-bold text-green-600">
+						₹ 100 /-
+					</div>
+				</div>
+
+				<!-- 2nd Plan -->
+				<div
+					class="flex flex-col lg:w-3/12 items-center justify-center rounded-3xl border border-teal-900 p-6 bg-green-200 gap-4"
+				>
+					<div class="text-lg font-semibold text-green-600">
+						1 Month
+					</div>
+					<div class="text-3xl font-bold text-teal-900">
+						Monthly
+					</div>
+					<div class="flex justify-center items-center">
+						<ul class="list-disc ml-10 text-lg">
+							<li>
+								Unlimited Disease Prediction for 30 days
+							</li>
+							<li>
+								Educational Resources
+							</li>
+							<li>
+								Works on any device
+							</li>
+						</ul>
+					</div>
+					<div class="text-3xl text-center font-bold text-green-600">
+						₹ 400 /-
+					</div>
+				</div>
+
+				<!-- 3rd Plan -->
+				<div
+					class="flex flex-col lg:w-3/12 items-center justify-center border border-teal-900 rounded-3xl p-6 gap-4"
+				>
+					<div class="text-lg font-semibold text-green-600">
+						3 Months
+					</div>
+					<div class="text-3xl font-bold text-teal-900">
+						Quarterly
+					</div>
+					<div class="flex justify-center items-center">
+						<ul class="list-disc ml-10 text-lg">
+							<li>
+								Unlimited Disease Prediction for 90 days
+							</li>
+							<li>
+								Educational Resources
+							</li>
+							<li>
+								Works on any device
+							</li>
+							<li>
+								Personalized care
+							</li>
+						</ul>
+					</div>
+					<div class="text-3xl text-center font-bold text-green-600">
+						₹ 1000 /-
+					</div>
+				</div>
+
+                <!-- 4th Plan -->
+				<div
+                    class="flex flex-col lg:w-3/12 items-center justify-center rounded-3xl border border-teal-900 bg-green-200 p-6 gap-4"
+                >
+                    <div class="text-lg font-semibold text-green-600">
+                        1 Year
+                    </div>
+                    <div class="text-3xl font-bold text-teal-900">
+                        Yearly
+                    </div>
+					<div class="flex justify-center items-center">
+						<ul class="list-disc ml-10 text-lg">
+							<li>
+								Unlimited Disease Prediction for 365 days
+							</li>
+							<li>
+								Educational Resources
+							</li>
+							<li>
+								Works on any device
+							</li>
+							<li>
+								Personalized care
+							</li>
+							<li>
+								Free Consultation with Doctors
+							</li>
+						</ul>
+					</div>
+					<div class="text-3xl text-center font-bold text-green-600">
+						₹ 3000 /-
+					</div>
+                </div>
+			</div>
+		</div>
+	</body>
+</html>
