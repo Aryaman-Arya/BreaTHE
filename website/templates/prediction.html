@@ -59,13 +59,24 @@
 				</div>
 
 				<div class="w-7/12 flex flex-col gap-16 m-8">
-					{% if prediction_text == "Bronchiectasis" %} {% include
-					"bronchiectasis.html" %} {% endif %} {% if prediction_text
-					== "Bronchiolitis" %} {% include "bronchiolitis.html" %}
-					{%endif %} {% if prediction_text == "COPD" %} {% include
-					"copd.html" %} {% endif %} {% if prediction_text ==
-					"Pneumonia" %} {% include "pneumonia.html" %} {% endif %}
-					{%if prediction_text == "URTI" %} {% include "urti.html" %}
+					{% if prediction_text == "Bronchiectasis" %} 
+					{% include"bronchiectasis.html" %} 
+					{% endif %} 
+					
+					{% if prediction_text == "Bronchiolitis" %} 
+					{% include "bronchiolitis.html" %}
+					{%endif %} 
+					
+					{% if prediction_text == "COPD" %} 
+					{% include "copd.html" %} 
+					{% endif %} 
+					
+					{% if prediction_text == "Pneumonia" %} 
+					{% include "pneumonia.html" %} 
+					{% endif %}
+					
+					{%if prediction_text == "URTI" %} 
+					{% include "urti.html" %}
 					{% endif %}
 				</div>
 			</div>
