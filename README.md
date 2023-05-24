@@ -6,6 +6,8 @@
 
 **BreaTHE** is a web application that uses the **audio clip of a user's breathing pattern** and evaluates their respiratory health. The web app provides insights into the user's respiratory health by checking whether the user falls into any of the following categories: **Bronchiolitis, Pneumonia, URTI, COPD, or Healthy**. BreaTHE has the potential to help people manage their respiratory health, especially in the current global pandemic, where respiratory illnesses are a significant concern to the whole humanity.
 
+![image](https://github.com/Aryaman-Arya/BreaTHE/assets/85841043/558436c8-5435-43b9-9536-7e91b43cf7a4)
+
 We are currently using the **ICBHI, 2017** challenge dataset for model training. The data samples include the respiratory sounds of both healthy individuals, as well as of patients who were having respiratory ailments. The patients span all age groups, including young children, adults, and senior citizens. The dataset consists of a total of **5.5 h of recordings containing 6898 respiratory cycles**, of which 1,864 contain crackles, 886 contain wheezes, and 506 contain both crackles and wheezes, in 920 annotated audio samples from 126 subjects.
 
 The distribution of the Dataset (before augmentation):
