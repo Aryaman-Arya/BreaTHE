@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>BreaTHE</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body
+		class="bg-slate-100 p-0 m-0"
+		style="font-family: 'Saira Semi Condensed'"
+	>
+		{% include 'navbar.html' %}
+		<div class="w-4/5 mt-8 m-auto overflow-hidden">
+			<!-- Hero section -->
+			<div class="max-w-screen-xl flex flex-col lg:flex-row lg:items-center gap-5">
+				<div class="flex flex-col gap-8 lg:w-7/12">
+					<h1 class="flex flex-col font-bold text-teal-900 text-7xl">
+						<span>Breath Tracking and</span>
+						<span>
+							<span class="text-green-600">Health</span>
+							Evaluation</span
+						>
+					</h1>
+
+					<h2 class="text-teal-900 text-5xl lg:text-4xl">
+						Solving for India - Hackathon Series
+					</h2>
+					<div class="flex justify-start items-center gap-6">
+						<div class="w-32 lg:w-24 h-auto">
+							<img
+								src="../static/images/amd_logo.png"
+								alt="AMD logo"
+								style="-webkit-user-drag: none"
+							/>
+						</div>
+						<div class="flex items-center justify-center w-72 h-16 lg:w-56 lg:h-10">
+							<img
+								src="../static/images/gcp.svg"
+								alt="Google Cloud logo"
+								style="-webkit-user-drag: none"
+							/>
+						</div>
+						<div class="w-20 lg:w-16 h-auto">
+							<img
+								src="../static/images/gfg.png"
+								alt="GFG logo"
+								style="-webkit-user-drag: none"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="w-full flex flex-col items-center gap-10 lg:w-5/12">
+					<img
+						class="w-full h-auto"
+						src="../static/images/sfih_poster.svg"
+						alt="Hero SVG"
+						style="-webkit-user-drag: none"
+					/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
