@@ -1,121 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Prediction</title>
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body class="mx-20 min-h-screen bg-gradient-to-b from-rose-100 to-teal-100">
-		<div class="mx-auto p-10 flex flex-col">
-			<div>
-				<h1
-					class="text-6xl justify-center items-center font-bold mb-10 select-none lg:text-4xl justify-start items-start"
-				>
-					Brea<span class="text-red-700">THE</span> : Breath Tracking
-					and Health Evaluation
-				</h1>
-
-				<div
-					class="flex items-center justify-center w-full gap-5 mb-10 lg:justify-end"
-				>
-					<div
-						class="flex flex-col justify-center items-center select-none"
-					>
-						<p class="text-xl font-semibold">
-							<span class="text-2xl text-red-700 font-bold"
-								>S</span
-							>olving for
-							<span class="text-2xl text-red-700 font-bold"
-								>I</span
-							>ndia
-							<span class="text-2xl text-red-700 font-bold"
-								>H</span
-							>ackathon
-						</p>
-						<p class="text-xl font-semibold">2023</p>
-					</div>
-
-					<img
-						class="p-2 shadow rounded-2xl w-auto h-20 align-middle border-2 border-gray-500 border-dashed select-none"
-						src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210420155809/gfg-new-logo.png"
-						alt="GFG logo"
-						style="-webkit-user-drag: none"
-					/>
-					<img
-						class="p-1 shadow rounded-2xl w-auto h-20 align-middle border-2 border-gray-500 border-dashed select-none"
-						src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg"
-						alt="google-cloud logo"
-						style="-webkit-user-drag: none"
-					/>
-				</div>
-			</div>
+	<body
+		class="bg-slate-100 p-0 m-0"
+		style="font-family: 'Saira Semi Condensed'"
+	>
+		{% include 'base.html' %}
+		<div class="w-4/5 my-10 m-auto overflow-hidden">
 			<div class="flex mb-4">
-				<div class="w-1/2">
-					<p class="text-4xl font-semibold mb-4 lg:text-2xl">
-						<span
-							class="text-5xl text-red-700 font-bold lg:text-3xl"
-							>P</span
-						>rediction :
+				<div class="w-5/12">
+					<p class="text-5xl text-teal-900 font-bold mb-4">
+						Prediction :
 					</p>
 
 					{% if prediction_text == "Healthy" %}
-					<p class="text-4xl font-semibold mb-4 lg:text-2xl">
+					<p class="text-3xl font-medium mb-4">
 						<span
-							class="text-5xl text-green-700 font-bold lg:text-3xl"
+							class="text-3xl text-green-600"
 							>{{ prediction_text }}</span
 						>
 					</p>
 
 					{% else %}
-					<p class="text-4xl font-semibold mb-4 lg:text-2xl">
+					<p class="text-3xl font-medium mb-4">
 						<span
-							class="text-5xl text-red-700 font-bold lg:text-3xl"
+							class="text-3xl text-red-700"
 							>{{ prediction_text }}</span
 						>
 					</p>
 					{% endif %}
 
-					<p class="text-4xl font-semibold mb-4 lg:text-2xl">
-						<span
-							class="text-5xl text-red-700 font-bold lg:text-3xl"
-							>C</span
-						>onfidence :
+					<p class="text-4xl text-teal-900 font-bold mb-4">
+						Confidence :
 					</p>
 
 					{% if prediction_text == "Healthy" %}
-					<p class="text-4xl font-semibold mb-4 lg:text-2xl">
+					<p class="text-3xl font-medium mb-4">
 						<span
-							class="text-5xl text-green-700 font-bold lg:text-3xl"
+							class="text-3xl text-green-600"
 							>{{ prediction_confidence }}</span
 						>
 					</p>
 
 					{% else %}
-					<p class="text-4xl font-semibold mb-4 lg:text-2xl">
+					<p class="text-3xl font-medium mb-4">
 						<span
-							class="text-5xl text-red-700 font-bold lg:text-3xl"
+							class="text-3xl text-red-700"
 							>{{ prediction_confidence }}</span
 						>
 					</p>
 					{% endif %}
 				</div>
 
-				<div class="w-1/2">
+				<div class="w-7/12 flex flex-col gap-16 m-8">
 					{% if prediction_text == "Bronchiectasis" %} {% include
 					"bronchiectasis.html" %} {% endif %} {% if prediction_text
-					== "Bronchiolitis" %} {% include "bronchiolitis.html" %} {%
-					endif %} {% if prediction_text == "COPD" %} {% include
+					== "Bronchiolitis" %} {% include "bronchiolitis.html" %}
+					{%endif %} {% if prediction_text == "COPD" %} {% include
 					"copd.html" %} {% endif %} {% if prediction_text ==
-					"Pneumonia" %} {% include "pneumonia.html" %} {% endif %} {%
-					if prediction_text == "URTI" %} {% include "urti.html" %} {%
-					endif %}
+					"Pneumonia" %} {% include "pneumonia.html" %} {% endif %}
+					{%if prediction_text == "URTI" %} {% include "urti.html" %}
+					{% endif %}
 				</div>
 			</div>
 
 			<button
-				class="bg-red-800 hover:bg-red-900 text-white w-40 font-bold py-2 px-4 rounded"
+				class="bg-green-600 hover:bg-teal-900 transition duration-200 text-white w-40 font-bold py-2 px-4 rounded"
 			>
-				<a href="{{ url_for('home') }}">Back to Home</a>
+				<a href="{{ url_for('index') }}">Back to Home</a>
 			</button>
 		</div>
+
+		{% include 'footer.html' %}
 	</body>
 </html>
