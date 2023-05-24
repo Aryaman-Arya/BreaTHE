@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>About</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Inter"
+			rel="stylesheet"
+		/>
+	</head>
+	<body
+		class="bg-slate-100 p-0 m-0"
+		style="font-family: 'Saira Semi Condensed'"
+	>
+		{% include 'navbar.html' %}
+
+		<div class="w-4/5 mt-10 m-auto overflow-hidden">
+			<div class="flex items-center justify-center mb-8">
+				<h1 class="text-5xl font-bold text-teal-900">Meet Our Team</h1>
+			</div>
+			<div class="flex flex-col lg:flex-row gap-10 my-16">
+				<!-- 1st Person -->
+				<div
+					class="flex flex-col w-full lg:w-4/12 items-center justify-center rounded-3xl p-6 gap-4"
+				>
+					<div class="flex justify-center">
+						<img
+							class="w-48 h-48 rounded-3xl"
+							src="../static/images/aryaman.jpg"
+							alt="aryaman"
+						/>
+					</div>
+					<div class="text-xl font-semibold text-green-600">
+						ML Engineer
+					</div>
+
+					<div class="text-3xl font-bold text-teal-900">Aryaman</div>
+
+					<div
+						class="text-lg leading-10 text-center"
+						style="font-family: Inter"
+					>
+					Pre-final year undergrad of Data Science and Artificial Intelligence at IIIT-Naya Raipur, Undergraduate Researcher at National Taiwan University, Research intern at Samsung R&D.
+					</div>
+					
+					<div class="flex items-center justify-center gap-4">
+						<a href="https://github.com/Aryaman-Arya">
+							<img class="w-10 h-10" src="../static/images/github.svg"></img>
+						</a>
+						<a href="https://www.linkedin.com/in/aryaman-9282141b8/">
+							<img class="w-10 h-10" src="../static/images/linkedin.svg"></img>
+						</a>
+						
+					</div>
+				</div>
+
+				<!-- 2nd Person -->
+				<div
+					class="flex flex-col w-full lg:w-4/12 items-center justify-center rounded-3xl p-6 lg:bg-green-200 gap-4"
+				>
+					<div class="flex justify-center">
+						<img
+							class="w-48 h-48 rounded-3xl"
+							src="../static/images/yash.jpg"
+							alt="yash"
+						/>
+					</div>
+					<div class="text-xl font-semibold text-green-600">
+						Web Developer
+					</div>
+
+					<div class="text-3xl font-bold text-teal-900">
+						Yash Ghodekar
+					</div>
+					<div
+						class="text-lg leading-10 text-center"
+						style="font-family: Inter"
+					>
+					Pre-final year Computer Science and Engineering student at IIIT Naya Raipur, Undergraduate Researcher at Blockchain Lab IIITNR, a Competitive coder, and a Web developer.
+					</div>
+
+					<div class="flex items-center justify-center gap-4">
+						<a href="https://github.com/yash-g101"> 
+							<img class="w-10 h-10" src="../static/images/github.svg"></img>
+						</a>
+						<a href="https://www.linkedin.com/in/yash-ghodekar-053832201/"> 
+							<img class="w-10 h-10" src="../static/images/linkedin.svg"></img>
+						</a>
+					</div>
+				</div>
+
+				<!-- 3rd Person -->
+				<div
+					class="flex flex-col w-full lg:w-4/12 items-center justify-center rounded-3xl p-6 gap-4"
+				>
+					<div class="flex justify-center">
+						<img
+							class="w-48 h-48 rounded-3xl"
+							src="../static/images/sanjam.jpg"
+							alt="sanjam"
+						/>
+					</div>
+					<div class="text-xl font-semibold text-green-600">
+						ML Engineer
+					</div>
+					<div class="text-3xl font-bold text-teal-900">
+						Sanjam Kaur Bedi
+					</div>
+					<div
+						class="text-lg leading-10 text-center"
+						style="font-family: Inter"
+					>
+						Pre-final year undergrad of Data Science and Artificial Intelligence at IIIT Naya Raipur, Currently working as a Data Analyst Intern at WNS.
+					</div>
+
+					<div class="flex items-center justify-center gap-4">
+						<a href="https://github.com/Sanjam-Bedi"> 
+							<img class="w-10 h-10" src="../static/images/github.svg"></img>
+						</a>
+						<a href="https://www.linkedin.com/in/sanjam-kaur-bedi-5a87551ba/">
+							<img class="w-10 h-10" src="../static/images/linkedin.svg"></img>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
