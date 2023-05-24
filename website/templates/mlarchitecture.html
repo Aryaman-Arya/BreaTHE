@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>About</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Inter"
+			rel="stylesheet"
+		/>
+	</head>
+	<body
+		class="bg-slate-100 p-0 m-0"
+		style="font-family: 'Saira Semi Condensed'"
+	>
+		{% include 'navbar.html' %}
+
+		<div class="w-4/5 mt-10 m-auto overflow-hidden">
+            <div class="flex flex-col gap-6 mb-8">
+				<div class="flex items-center gap-4">
+					<div class="w-2 h-12 bg-green-600"></div>
+					<div class="font-bold text-3xl lg:text-4xl text-teal-900">
+						Dataset Description
+					</div>
+                    <div>
+                        <a href="https://bhichallenge.med.auth.gr/ICBHI_2017_Challenge">
+                            <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 48 48" height="32px" version="1.1" viewBox="0 0 48 48" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Expanded"><g><g><path d="M14.101,42.314c-1.87,0-3.628-0.729-4.95-2.051L7.736,38.85c-2.729-2.729-2.729-7.171,0-9.899l9.192-9.192     c1.322-1.322,3.08-2.051,4.95-2.051s3.628,0.729,4.949,2.051l1.414,1.414c0.391,0.391,0.391,1.023,0,1.414s-1.023,0.391-1.414,0     l-1.414-1.414c-0.944-0.944-2.2-1.465-3.535-1.465c-1.336,0-2.592,0.521-3.536,1.465L9.15,30.364     c-1.949,1.949-1.949,5.121,0,7.071l1.414,1.414c0.944,0.944,2.2,1.465,3.536,1.465c1.335,0,2.591-0.521,3.535-1.465L24,32.485     c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414l-6.364,6.364C17.729,41.586,15.971,42.314,14.101,42.314z"/></g><g><path d="M26.121,30.293c-1.869,0-3.628-0.729-4.949-2.051c-0.391-0.391-0.391-1.023,0-1.414s1.023-0.391,1.414,0     c0.944,0.944,2.2,1.465,3.535,1.465c1.336,0,2.592-0.521,3.536-1.465l9.192-9.192c1.949-1.949,1.949-5.121,0-7.07L37.436,9.15     c-1.949-1.949-5.122-1.949-7.071,0L24,15.515c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414l6.364-6.364     c2.729-2.729,7.17-2.729,9.899,0l1.414,1.415c2.729,2.729,2.729,7.17,0,9.898l-9.192,9.192     C29.75,29.564,27.991,30.293,26.121,30.293z"/></g></g></g></svg>     
+                        </a>
+                    </div>
+				</div>
+				<div>
+					<p class="text-xl leading-8 lg:leading-10" style="font-family: Inter">
+						The Respiratory Sound Database was developed specifically to support the research challenge at the International Conference on Biomedical Health Informatics - ICBHI 2017. It includes a total of 920 audio samples that have been annotated and come from 126 patients, providing a combined recording time of 5.5 hours and containing 6898 respiratory cycles. The cycles were assessed by experts who determined if they had crackles, wheezes, both, or no atypical respiratory sounds. Of the 6898 cycles, 1864 contained wheezes, 886 contained crackles, and 506 contained both. The recordings varied in duration, lasting from 10 to 90 seconds, and were made using various equipment pieces. The database also includes the locations on the chest where the recordings were taken. Some respiratory cycles have high noise levels, creating a realistic representation of real-world scenarios.
+					</p>
+				</div>
+			</div>
+
+            <div class="flex flex-col gap-6 mb-8">
+				<div class="flex items-center gap-4">
+					<div class="w-2 h-12 bg-green-600"></div>
+					<div class="font-bold text-3xl lg:text-4xl text-teal-900">
+						Preprocessing and Feature Extraction
+					</div>
+				</div>
+				<div>
+					<img src="../static/images/preprocessing.png" alt="federated architecture" style="-webkit-user-drag: none" />
+				</div>
+			</div>
+
+            <div class="flex flex-col gap-6 mb-8">
+				<div class="flex items-center gap-4">
+					<div class="w-2 h-12 bg-green-600"></div>
+					<div class="font-bold text-3xl lg:text-4xl text-teal-900">
+						Federated Learning Architecture
+					</div>
+				</div>
+				<div>
+					<img src="../static/images/Federated_architecture.jpeg" alt="federated architecture" style="-webkit-user-drag: none" />
+				</div>
+			</div>
+
+            <div class="flex flex-col gap-6 mb-8">
+				<div class="flex items-center gap-4">
+					<div class="w-2 h-12 bg-green-600"></div>
+					<div class="font-bold text-3xl lg:text-4xl text-teal-900">
+						Comparison of the models
+					</div>
+				</div>
+				<div class="flex flex-col gap-4 lg:flex-row">
+					<img class="w-full lg:w-1/2" src="../static/images/val_acc.png" alt="federated architecture" style="-webkit-user-drag: none" />
+                    <img class="w-full lg:w-1/2" src="../static/images/val_loss.png" alt="federated architecture" style="-webkit-user-drag: none" />
+				</div>
+			</div>
+		</div>
+
+        {% include 'footer.html' %}
+	</body>
+</html>
