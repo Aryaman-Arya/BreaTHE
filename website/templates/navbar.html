@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>BreaTHE</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="bg-slate-100 p-0 m-0" style="font-family: 'Saira Semi Condensed'">
+		<div class="w-4/5 mx-auto mt-8 overflow-hidden">
+			<!-- Navbar -->
+			<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4" id="navbar">
+				<div class="flex items-center justify-start gap-4">
+					<div class="w-20 h-20 lg:w-12 lg:h-12">
+						<img src="../static/images/lungs_icon.svg" alt="BreaTHE SVG" style="-webkit-user-drag: none"/>
+					</div>
+					<div class="font-bold text-7xl text-teal-900 leading-normal lg:text-5xl">
+						<a href="/" class="brand" style="-webkit-user-drag: none">BreaTHE</a>
+					</div>
+				</div>
+				<div class="flex lg:order-2 lg:hidden">
+					<button data-collapse-toggle="navbar-default" type="button" class="transition ease-in-out duration-700 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
+					  <span class="sr-only">Open main menu</span>
+					  <svg class="w-16 h-16" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+					</button>
+				</div>
+
+				<div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
+					<ul class="text-3xl gap-4 lg:gap-0 font-semibold justify-right lg:text-xl lg:items-center flex flex-col p-4 lg:p-0 mt-4 lg:mt-0 lg:flex-row lg:space-x-8">
+						<li>
+							<a href="/" class="block py-2 pl-3 pr-4 text-teal-900 bg-green-600 rounded lg:bg-transparent lg:hover:text-green-600 lg:p-0" aria-current="page">Home</a>
+						</li>
+						<li>
+							<a href="/about" class="block py-2 pl-3 pr-4 text-teal-900 rounded lg:hover:text-green-600 lg:p-0">About</a>
+						</li>
+						<li>
+							<a href="/subscriptions" class="block py-2 pl-3 pr-4 text-teal-900 rounded lg:hover:text-green-600 lg:p-0">Subscriptions</a>
+						</li>
+						<li>
+							<a href="/mlarchitecture" class="block py-2 pl-3 pr-4 text-teal-900 rounded lg:hover:text-green-600 lg:p-0">ML Architecture</a>
+						</li>
+						{% if user_logged_in %}
+						<li>
+							<a href="/index" class="block py-2 pl-3 pr-4 text-teal-900 rounded lg:hover:text-green-600 lg:p-0">Dashboard</a>
+						</li>
+						{% endif %}
+						{% if not user_logged_in %}
+						<li>
+							<a href="/login" class="block py-2 pl-3 pr-4 text-teal-900 rounded lg:hover:text-green-600 lg:p-0">Login</a>
+						</li>
+						{% else %}
+						<li>
+							<a href="/logout" class="block py-2 pl-3 pr-4 text-teal-900 rounded lg:hover:text-green-600 lg:p-0">Logout</a>
+						</li>
+						{% endif %}
+
+						{% if not user_logged_in %}
+						<li>
+							<a href="/signup" class="block py-2 pl-3 pr-4 text-teal-900 lg:text-slate-100 lg:p-0">
+								<div class="lg:px-4 lg:py-2 rounded lg:bg-green-600 lg:hover:bg-teal-900">
+									Sign Up
+								</div>
+							</a>
+						</li>
+						{% endif %}
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function toggleMenu() {
+				var navbarDefault = document.getElementById("navbar-default");
+				var button = document.querySelector('[data-collapse-toggle="navbar-default"]');
+				var expanded = button.getAttribute("aria-expanded");
+		
+				if (expanded === "false") {
+					navbarDefault.style.display = "block";
+					button.setAttribute("aria-expanded", "true");
+				} else {
+					navbarDefault.style.display = "none";
+					button.setAttribute("aria-expanded", "false");
+				}
+			}
+		</script>
+	</body>
+</html>
