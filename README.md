@@ -34,7 +34,7 @@ Signals after Log-Mel transform -
 
 ![image](https://user-images.githubusercontent.com/85841043/230003483-d3c861c8-9d30-4fc1-83eb-3ce58d37639f.png)
 
-We have used Federated learning architecture to predict the above mentioned diseases which achieves the validation accuracy of 99.19% and has a False Negative rate of 0.008 (i.e 1 out of every 125 patients).
+We have used Federated learning architecture to predict the above mentioned diseases which achieves the validation accuracy of 97.19% and has a False Negative rate of 0.008 (i.e 1 out of every 125 patients).
 
 ![image](https://github.com/Aryaman-Arya/BreaTHE/assets/85841043/abcadb73-9a42-4aba-846d-5f5131a8b364)
 
